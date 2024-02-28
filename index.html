@@ -2,25 +2,15 @@
 
 <body>
   <div id="app"></div>
-  <script type="text/javascript">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/jsx">
     const app = document.getElementById('app');
+    const root = ReactDOM.createRoot(app);
+    root.render(<h1>Develop. Preview. Ship</h1>)
 
-    //create a new H1 element
-    const header = document.createElement('h1');
-
-    //create a new text node for H1 element
-    const text = 'Develop. Preview. Ship.';
-    const headerContent = document.createTextNode(text);
-
-    //Append the text to the H1 element
-    header.appendChild(headerContent);
-
-    //Place the H1 element inside the div
-    app.appendChild(header);
-
-    //In other words, imperative programming is like giving a chef step-by-step instructions on how to make a pizza. 
-    //Declarative programming is like ordering a pizza without being concerned about the steps it takes to make the pizza. 🍕
-    //Declarative programming allows you to describe what you want to happen, rather than the steps to make it happen.
   </script>
 
 </body>
