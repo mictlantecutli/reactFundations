@@ -8,8 +8,26 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/jsx">
     const app = document.getElementById('app');
+
+    //React components should be capitalized to distinguish them from plain HTML and JavaScript
+    function Header(){
+      return (<h1>Develop. Preview. Ship.</h1>)
+    }
+
+    //NESTING components
+    function HomePage(){
+      return (<div>
+        <Header />
+        <Header />
+      </div>
+      );
+    }
+
+
     const root = ReactDOM.createRoot(app);
-    root.render(<h1>Develop. Preview. Ship</h1>)
+    
+    //Second, you use React components the same way you'd use regular HTML tags, with angle brackets <>
+    root.render(<HomePage />);
 
   </script>
 
